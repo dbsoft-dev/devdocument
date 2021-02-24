@@ -1,0 +1,24 @@
+{
+  "plugins": [
+    "-lunr", "-search", "search-pro",
+    "back-to-top-button",
+    "chapter-fold",
+    "code",
+    "splitter",
+    "tbfed-pagefooter",
+    "popup",
+    "page-toc-button",
+    "accordion"
+  ],
+  "pluginsConfig": {
+    "tbfed-pagefooter": {
+      "copyright": "Copyright &copy 长春市深蓝软件有限责任公司 2021",
+      "modify_label": "该文件修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "page-toc-button": {
+      "maxTocDepth": 2,
+      "minTocSize": 2
+    }
+  }
+}
