@@ -1,6 +1,6 @@
 # Summary
 
-* [介绍](README.md)
+* [Introduction](README.md)
 * [前言](readme.md)
 * [开发基础知识](kai-fa-ji-chu-zhi-shi.md)
     * [JavaScript常见对象及方法](part1/1.md)
@@ -45,6 +45,7 @@
         * [超链接 Hyperlink](part2/chao-lian-jie-hyperlink.md)
         * [签名板 SignatureBoard](part2/qian-ming-ban-signatureboard.md)
         * [文件上传 FileUploader](part2/wen-jian-shang-chuan-fileuploader.md)
+        * [进度条 ProgressBar](part2/jin-du-tiao-progressbar.md)
     * [布局控件](part2/bu-ju-kong-jian.md)
         * [面板容器 Panel](part2/bu-ju-kong-jian/mian-banrong-qi-panel.md)
         * [停靠管理器 DockManager（PC）](part2/bu-ju-kong-jian/ting-kaoguan-li-qi-dockmanager-pc.md)
@@ -74,6 +75,7 @@
         * [弹出式导航视图PopupNavigationView](part2/dan-chu-shi-dao-hang-shitu-popupnavigationview.md)
         * [页面选项卡TabPageView](part2/ye-mian-xuan-xiang-qia-tabpageview.md)
         * [通知监听器(PC) MessageListener](part2/tong-zhi-jian-ting-566828-pc-messagelistener.md)
+        * [导航栏 NavigationBar（App）](part2/dao-hang-lan-navigationbar-app.md)
     * [数据访问控件](part2/shu-ju-fang-wen-kong-jian.md)
         * 数据访问计时器
         * 数据访问按钮
@@ -212,4 +214,6 @@
 * [微信公众号打开应用界面](wei-xin-gong-zhong-hao-da-kai-ying-yong-jie-mian.md)
 * [微信浏览器私有接口](wei-xin-liu-lan-qi-si-you-jie-kou.md)
 * [砚台APP首页扫描二维码加载界面](yan-tai-app-shou-ye-sao-miao-er-wei-ma-jia-zai-jie-mian.md)
+* [附表](fu-biao.md)
+    * [高德地图：国家与地区SOC](fu-biao/gao-de-di-tu-ff1a-guo-jia-yu-di-qu-soc.md)
 
