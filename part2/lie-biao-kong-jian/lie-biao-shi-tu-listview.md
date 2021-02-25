@@ -228,10 +228,18 @@
     ```
 * ##### AddItem\(data,Temp\)-方法，添加一行；
 
-  * 说明：为列表视图添加一行，参数data为对象类型；Temp为字符串类型，可选参数，模板的名字，如不传此参数，添加默认模板。
+  * 说明：为列表视图添加一行，参数data为对象类型；Temp为字符串类型，可选参数，模板的名字，如不传此参数，添加默认模板；返回值为Item对象；
 * * 示例：
   * ```js
-    ListView.AddItem({'Text':'标题1','Value':'副标题……'},'ItemTemplate');    //ListView为控件对象
+    var Item = ListView.AddItem({'Text':'标题1','Value':'副标题……'},'ItemTemplate');    //ListView为控件对象
+    ```
+* ##### AddItemAt\(position,data,Temp\)-方法，在指定位置添加一行；
+
+  * 说明：为列表视图在指定位置添加一行，参数position为数值类型，需要插入item的位置，从0开始；data为对象类型，插入item的数据上下文对象；Temp为字符串类型，可选参数，模板的名字，如不传此参数，添加默认模板；返回值为Item对象；
+* * 示例：
+  * ```js
+    //ListView为控件对象 在首行添加一行
+    var Item = ListView.AddItemAt(0,{'Text':'标题1','Value':'副标题……'},'ItemTemplate');
     ```
 * ##### Items-属性，获取所有行对象集合；
 
