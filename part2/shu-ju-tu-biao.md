@@ -4,7 +4,266 @@
 
 #### 图表基本组成：
 
-#### ![](/assets/hchart01.png)数据源属性DataSource，类型：对象；基础数据结构：
+#### ![](/assets/hchart01.png)
+
+### 设计属性
+
+* ##### 对象名称
+
+  * 类型：字符串；
+
+  * 值：
+
+  * 说明：自定义控件对象名；
+* ##### 图表类型
+
+  * 类型：下拉选列表；
+
+  * 值：
+
+  * 说明：部分图表（柱状图、散点/气泡图、3D图）可以设置图表类型；
+* ##### 图表标题
+
+  * 类型：字符串；
+
+  * 说明：设置图表的主标题；
+* ##### 图表副标题
+
+  * 类型：字符串；
+
+  * 说明：设置图表的副标题；
+* ##### 项目成员
+
+  * 类型：字符串；
+
+  * 说明：设置数据源属性值在表单数据上下文对象中的键名；
+* ##### 无数据显示文字
+
+  * 类型：字符串；
+
+  * 说明：设置在无数据时显示的文本；
+* ##### 显示图例
+
+  * 类型：（单选框）；
+
+  * 说明：是否显示图例；
+* ##### 图例位置
+
+  * 类型：（下拉选列表）；
+
+  * 说明：设置图例在图表控件中显示的位置；
+* ##### 数据标签
+
+  * 类型：（单选框）；
+
+  * 说明：设置是否显示数据标签；
+
+### 事件处理程序
+
+* ##### LegendClick
+
+  * 调用时机：点击图例标签时；
+  * 说明：可在此事件中获取到点击的图例对应的数据对象ClickedLegendDataContext；
+  * 备注：
+* ##### SerieClick
+
+  * 调用时机：点击图表序列时；
+  * 说明：可在此事件中获取到点击的图例对应的数据对象ClickedSerieDataContext；
+  * 备注：
+
+### 属性、方法
+
+* ##### Chart-属性，获取图表对象；
+
+  * 说明：对象，图表对象，可以直接操作数据图表添加、删除数据，刷新显示等操作；属性和方法见表1、图表对象Chart属性、方法；
+* * 示例：
+  * ```js
+    //HChart为数据图表控件对象；
+    var chart = HChart.Chart;
+    ```
+* ##### DataSource-设置显示数据源；
+
+  * 说明：对象，DataSource对象，详细数据格式见使用说明文档；
+* * 示例：
+  * ```js
+    //HChart为数据图表控件对象
+    HChart.DataSource = {}
+    ```
+* ##### ClickedLegendDataContext-获取点击图例的数据对象；
+
+  * 说明：数据类型为对象，格式为给定的数据格式；
+* * 示例：
+  * ```js
+    //HChart为数据图表控件对象
+    var data = HChart.ClickedLegendDataContext;
+    ```
+* ##### ClickedSerieDataContext-获取点击序列的数据对象；
+
+  * 说明：
+* * 示例：
+  * ```js
+    //HChart为数据图表控件对象
+    var data = HChart.ClickedSerieDataContext;
+    ```
+
+### _图表对象Chart属性、方法_
+
+* ##### addSeries\(options, redraw, animation\)-添加数据列
+
+  * 说明：方法，在图表渲染完毕后对图表进行新增数据列操作。
+    参数：options-数据列配置对象；redraw-添加完数据列后是否重绘图表，默认为true；animation-默认为true，添加数据列是否包含默认的动画效果；
+* * 示例：
+  * ```js
+    //Chart为图表对象，通过HChart.Chart获取；
+    Chart.addSeries({});
+    ```
+* ##### redraw\(\)-重绘；
+
+  * 说明：当图表的数据、坐标轴等有更新是时，调用此方法可以对图表进行重新绘制操作。
+* * 示例：
+  * ```js
+    //Chart为图表对象，通过HChart.Chart获取；
+    Chart.redraw()
+    ```
+* ##### reflow\(\)-重新适应；
+
+  * 说明：让图表自适应图表容器。
+* * 示例：
+  * ```js
+    //Chart为图表对象，通过HChart.Chart获取；
+    Chart.reflow()	
+    ```
+* ##### update\(options, redraw\)-更新；
+
+  * 说明：通用的图表更新函数（可以更新任意图表元素）；参数：options-更新的配置对象；redraw-是否在更新图表后进行重绘操作，默认是 true。
+* * 示例：
+  * ```js
+    //Chart为图表对象，通过HChart.Chart获取；
+    Chart.update({}，true);	
+    ```
+
+* ##### showLoading\(str\)-显示加载中效果
+
+  * 说明：方法；
+    参数：参数str-字符串，指定显示的文字；
+* * 示例：
+  * ```js
+    //Chart为图表对象，通过HChart.Chart获取；
+    Chart.showLoading('正在加载，请稍候……');
+    ```
+* ##### hideLoading \(\)-隐藏加载中效果；
+
+  * 说明：
+* * 示例：
+  * ```js
+    //Chart为图表对象，通过HChart.Chart获取；
+    Chart.hideLoading()
+    ```
+* ##### series-数据列；
+
+  * 说明：图表的数据列对象数组，数据列对象的属性和方法见表2、数据列对象serie属性和方法。
+* * 示例：
+  * ```js
+    //Chart为图表对象，通过HChart.Chart获取；
+    var series = Chart.series;
+    ```
+
+### 数据列对象serie_属性、方法_
+
+* ##### addPoint\(options, redraw, shift,animation\)-增加数据点
+
+  * 说明：方法，在图表渲染完毕后对数据列进行新增点操作。新增的点可以是最后的点，也可以给定 X 值来放置在对应的位置（最开始，中间位置，取决于 x值）。
+    参数：options-数据列配置对象；redraw-添加完数据列后是否重绘图表，默认为true；animation-默认为true，添加点是否包含默认的动画效果；
+* * 示例：
+  * ```js
+    //serie为数据列对象；
+    serie.addPoint({});
+    ```
+* ##### removePoint\(index, redraw, animation\)-移除数据点；
+
+  * 说明：从数据列中删除点。
+* * 示例：
+  * ```js
+    //serie为数据列对象；
+    serie.removePoint(1，true,true);
+    ```
+* ##### hide\(\)-隐藏数据列；
+
+  * 说明：隐藏数据列（只有数据列为显示状态才有效）；
+* * 示例：
+  * ```js
+    //serie为数据列对象；
+    serie.hide();
+    ```
+* ##### show\(\)-显示数据列；
+
+  * 说明：显示数据列（只有在数据列隐藏的情况下有效）。
+* * 示例：
+  * ```js
+    //serie为数据列对象；
+    serie.show();
+    ```
+
+* ##### remove\(redraw\)-删除数据列
+
+  * 说明：从图表中删除数据列；
+    参数：参数redraw-布尔，是否重绘；
+* * 示例：
+  * ```js
+    //serie为数据列对象；
+    serie.remove(true);
+    ```
+* ##### select\(selected\)-选中数据列；
+
+  * 说明：selected:布尔类型，是否选中；
+* * 示例：
+  * ```js
+    //serie为数据列对象；
+    serie.select(true);
+    ```
+* ##### selected-获取选中状态；
+
+  * 说明：只读属性，返回值Boolean类型。
+* * 示例：
+  * ```js
+    //serie为数据列对象；
+    var selected = serie.selected;
+    ```
+* ##### setData\(data,redraw,animation,updataPoints\)-更新数据；
+
+  * 说明：
+* * 示例：
+  * ```js
+    //serie为数据列对象；
+    serie.setData({});
+    ```
+
+* ##### update\(options,redraw\)-更新配置
+
+  * 说明：options:更新的配置项；redraw：更新后时候重绘，默认true；
+* * 示例：
+  * ```js
+    //serie为数据列对象；
+    serie.update({});
+    ```
+* ##### data-数据；
+
+  * 说明：包含数据列所有数据点数组，只读属性。
+* * 示例：
+  * ```js
+    //serie为数据列对象；
+    var data = serie.data;
+    ```
+* ##### chart-图表对象；
+
+  * 说明：数据列所在的图表对象，只读属性。
+* * 示例：
+  * ```js
+    //serie为数据列对象；
+    var chart = serie.chart;
+    ```
+
+#### 数据源属性DataSource，类型：对象；基础数据结构：
 
 ```js
 {

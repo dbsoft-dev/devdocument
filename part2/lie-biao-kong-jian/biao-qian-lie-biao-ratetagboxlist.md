@@ -39,9 +39,6 @@
   * 类型：（颜色选择器）；
 
   * 说明：选中状态下背景颜色；
-
-
-
 * ##### 选择模式
 
   * 类型：（下拉选）；
@@ -52,6 +49,31 @@
   * 类型：（单选框）；
 
   * 说明：赋值数据时，在未匹配到选项时，是否将未匹配到的选项作为可选项添加到列表；
+* ##### 显示属性
+
+  * 类型：字符串；
+
+  * 说明：设置数据源中需要显示的文本字段名称，默认值Title；
+* ##### 取值属性
+
+  * 类型：字符串；
+
+  * 说明：设置数据源中需要取值的属性，默认值Value；
+* ##### 状态属性
+
+  * 类型：字符串；
+
+  * 说明：设置数据源中需要获取的状态属性，默认值Status；
+* ##### 项目成员
+
+  * 类型：字符串；
+
+  * 说明：设置表单数据上下文对象中需要赋值给数据源的字段名；
+* ##### 绑定路径
+
+  * 类型：字符串；
+
+  * 说明：设置表单数据上下文对象中需要赋值给选中值集合的字段名；
 
 ### 事件处理程序
 
@@ -89,8 +111,32 @@
     //结构——[{Title:" 选项1",Status:1},{Title:" 选项3",Status:1}]
     var selectedItems = RateTagBoxList.SelectedItems;   //RateTagBoxList为控件对象
     ```
+* ##### Values-属性，获取/设置选中值集合；
 
+  * 说明：数组；
+* * 示例：
+  * ```js
+    RateTagBoxList.ItemSource = [{Title:"选项1",Value:0，Status:0},
+    {Title:" 选项2",Value:2},
+    {Title:" 选项1",Value:3},
+    {Title:" 选项1",Value:4}]  ;//RateTagBoxList为控件对象
+    ```
+* ##### SelectedTitles-属性，获取选中标题集合；
 
+  * 说明：数组；
+* * 示例：
+  * ```js
+    //结构——['选项1','选项2']
+    var selectedValues = RateTagBoxList.SelectedTitles;   //RateTagBoxList为控件对象
+    ```
+* ##### SelectedValues-属性，获取选中值集合；
+
+  * 说明：数组；
+* * 示例：
+  * ```js
+    //结构——['1','2']
+    var selectedValues = RateTagBoxList.SelectedValues;   //RateTagBoxList为控件对象
+    ```
 
 
 
