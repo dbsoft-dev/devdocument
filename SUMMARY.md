@@ -1,6 +1,5 @@
 # Summary
 
-* [Introduction](README.md)
 * [前言](readme.md)
 * [开发基础知识](kai-fa-ji-chu-zhi-shi.md)
     * [JavaScript常见对象及方法](part1/1.md)
@@ -10,6 +9,8 @@
     * [MongoDB应用](part1/3.md)
     * [MongoDB数据库数据类型](part1/4.md)
     * [全局对象-app](part1/quan-ju-dui-8c61-app.md)
+        * [CurrentApp](part1/quan-ju-dui-8c61-app/currentapp.md)
+        * [SecurityContext](part1/quan-ju-dui-8c61-app/securitycontext.md)
     * [常用属性、方法](part1/chang-yong-shu-xing-3001-fang-fa.md)
         * [Converter 数据转换](part1/chang-yong-shu-xing-3001-fang-fa/converter-shu-ju-zhuan-huan.md)
         * [Array 扩展方法](part1/chang-yong-shu-xing-3001-fang-fa/array-kuo-zhan-fang-fa.md)

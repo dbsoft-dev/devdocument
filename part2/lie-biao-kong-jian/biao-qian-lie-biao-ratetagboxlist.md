@@ -116,10 +116,7 @@
   * 说明：数组；
 * * 示例：
   * ```js
-    RateTagBoxList.ItemSource = [{Title:"选项1",Value:0，Status:0},
-    {Title:" 选项2",Value:2},
-    {Title:" 选项1",Value:3},
-    {Title:" 选项1",Value:4}]  ;//RateTagBoxList为控件对象
+    RateTagBoxList.Values = ["选项1","选项2"];//RateTagBoxList为控件对象
     ```
 * ##### SelectedTitles-属性，获取选中标题集合；
 
