@@ -96,6 +96,7 @@
         * [多功能查询框SearchBox](part2/lie-biao-kong-jian/duo-gong-neng-cha-xun-kuang-searchbox.md)
         * [转盘控件TurnPlate（APP）](part2/lie-biao-kong-jian/zhuan-pan-kong-jian-turnplate-app.md)
         * [节点流 NodeFlow](part2/lie-biao-kong-jian/jie-dian-liu-nodeflow.md)
+        * [属性编辑器 PropertyEditor](part2/lie-biao-kong-jian/shu-xing-bian-ji-qi-propertyeditor.md)
     * [AI控件](part2/aikong-jian.md)
         * [TTS控件TextToSpeech（PC）](part2/ttskong-jian-texttospeech-pc.md)
     * [数据图表](part2/shu-ju-tu-biao.md)
